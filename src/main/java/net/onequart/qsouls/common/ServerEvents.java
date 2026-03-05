@@ -6,7 +6,7 @@ import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.network.PacketDistributor;
-import net.onequart.qsouls.core.QSouls;
+import net.onequart.qsouls.QSouls;
 import net.onequart.qsouls.network.DamageNumberS2CPacket;
 import net.onequart.qsouls.network.ModMessages;
 

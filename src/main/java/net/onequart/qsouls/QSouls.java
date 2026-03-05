@@ -1,4 +1,4 @@
-package net.onequart.qsouls.core;
+package net.onequart.qsouls;
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;

@@ -12,7 +12,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.onequart.qsouls.core.QSouls;
+import net.onequart.qsouls.QSouls;
 
 import java.util.HashSet;
 import java.util.Map;

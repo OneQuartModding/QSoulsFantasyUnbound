@@ -9,7 +9,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderLevelStageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.onequart.qsouls.core.QSouls;
+import net.onequart.qsouls.QSouls;
 import net.onequart.qsouls.util.ItemHelper;
 import org.joml.Vector3f;
 

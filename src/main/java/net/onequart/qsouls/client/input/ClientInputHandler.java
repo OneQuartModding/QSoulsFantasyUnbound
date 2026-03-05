@@ -9,7 +9,7 @@ import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.onequart.qsouls.core.QSouls;
+import net.onequart.qsouls.QSouls;
 import net.onequart.qsouls.network.ModMessages;
 import net.onequart.qsouls.network.StartDashC2SPacket;
 
