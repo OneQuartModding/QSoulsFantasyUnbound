@@ -12,6 +12,7 @@ public class ModMessages {
     private static SimpleChannel INSTANCE;
     private static int packetId = 0;
     private static int id() { return packetId++; }
+    public static <MSG> void send(PacketDistributor.PacketTarget target, MSG message) { INSTANCE.send(target, message); }
 
     public static void register() {
         SimpleChannel net = NetworkRegistry.ChannelBuilder
@@ -27,6 +28,12 @@ public class ModMessages {
                 .decoder(StartDashC2SPacket::new)
                 .encoder(StartDashC2SPacket::toBytes)
                 .consumerMainThread(StartDashC2SPacket::handle)
+                .add();
+
+        net.messageBuilder(DamageNumberS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(DamageNumberS2CPacket::new)
+                .encoder(DamageNumberS2CPacket::toBytes)
+                .consumerMainThread(DamageNumberS2CPacket::handle)
                 .add();
     }
 
