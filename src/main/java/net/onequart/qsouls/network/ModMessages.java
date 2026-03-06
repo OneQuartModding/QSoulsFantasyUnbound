@@ -1,7 +1,6 @@
 package net.onequart.qsouls.network;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
@@ -34,6 +33,18 @@ public class ModMessages {
                 .decoder(DamageNumberS2CPacket::new)
                 .encoder(DamageNumberS2CPacket::toBytes)
                 .consumerMainThread(DamageNumberS2CPacket::handle)
+                .add();
+
+        net.messageBuilder(ImpactFrameS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(ImpactFrameS2CPacket::new)
+                .encoder(ImpactFrameS2CPacket::toBytes)
+                .consumerMainThread(ImpactFrameS2CPacket::handle)
+                .add();
+
+        net.messageBuilder(ScreenShakeS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(ScreenShakeS2CPacket::new)
+                .encoder(ScreenShakeS2CPacket::toBytes)
+                .consumerMainThread(ScreenShakeS2CPacket::handle)
                 .add();
     }
 

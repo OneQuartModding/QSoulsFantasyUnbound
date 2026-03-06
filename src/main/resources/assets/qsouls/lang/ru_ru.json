@@ -1,5 +1,10 @@
 {
   "itemGroup.example_tab": "Q Souls",
   "key.category.qsouls": "Q Souls Fantasy",
-  "key.qsouls.charge_attack": "Тяжелая атака (Рывок)"
+  "key.qsouls.charge_attack": "Тяжелая атака (Рывок)",
+
+  "config.qsouls.title": "Визуальные настройки Q Souls",
+  "config.qsouls.enable_impact_frames": "Включить вспышки ударов",
+  "config.qsouls.enable_screen_shake": "Включить тряску камеры",
+  "config.qsouls.screen_shake_intensity": "Сила тряски камеры"
 }

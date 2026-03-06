@@ -1,5 +1,7 @@
 package net.onequart.qsouls.common.skill;
 
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -12,7 +14,11 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.network.PacketDistributor;
 import net.onequart.qsouls.QSouls;
+import net.onequart.qsouls.network.ImpactFrameS2CPacket;
+import net.onequart.qsouls.network.ModMessages;
+import net.onequart.qsouls.network.ScreenShakeS2CPacket;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -62,9 +68,33 @@ public class HeavyMeleeManager {
                         target.knockback(0.8F, Math.sin(player.getYRot() * (Math.PI / 180F)), -Math.cos(player.getYRot() * (Math.PI / 180F)));
 
                         player.level().playSound(null, target.getX(), target.getY(), target.getZ(),
-                                SoundEvents.PLAYER_ATTACK_CRIT, SoundSource.PLAYERS, 1.0F, 0.8F);
+                                SoundEvents.PLAYER_ATTACK_CRIT, SoundSource.PLAYERS, 1.5F, 0.8F);
                         player.level().playSound(null, target.getX(), target.getY(), target.getZ(),
-                                SoundEvents.IRON_GOLEM_DAMAGE, SoundSource.PLAYERS, 0.8F, 1.2F);
+                                SoundEvents.IRON_GOLEM_DAMAGE, SoundSource.PLAYERS, 1.2F, 1.2F);
+                        player.level().playSound(null, target.getX(), target.getY(), target.getZ(),
+                                SoundEvents.GENERIC_EXPLODE, SoundSource.PLAYERS, 0.5F, 1.5F);
+
+                        if (player.level() instanceof ServerLevel serverLevel) {
+                            serverLevel.sendParticles(ParticleTypes.CRIT,
+                                    target.getX(), target.getY() + target.getBbHeight() / 2.0, target.getZ(),
+                                    30, 0.5, 0.5, 0.5, 0.3);
+
+                            serverLevel.sendParticles(ParticleTypes.SWEEP_ATTACK,
+                                    target.getX(), target.getY() + target.getBbHeight() / 2.0, target.getZ(),
+                                    1, 0.0, 0.0, 0.0, 0.0);
+
+                            serverLevel.sendParticles(ParticleTypes.LARGE_SMOKE,
+                                    target.getX(), target.getY(), target.getZ(),
+                                    10, 0.3, 0.1, 0.3, 0.05);
+                        }
+
+                        if (player instanceof ServerPlayer serverPlayer) {
+                            ModMessages.send(PacketDistributor.PLAYER.with(() -> serverPlayer),
+                                    new ImpactFrameS2CPacket(3, 0x66FFFFFF));
+
+                            ModMessages.send(PacketDistributor.PLAYER.with(() -> serverPlayer),
+                                    new ScreenShakeS2CPacket(10, 4.0f));
+                        }
                     }
                 }
             }

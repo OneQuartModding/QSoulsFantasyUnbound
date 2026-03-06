@@ -1,5 +1,10 @@
 {
   "itemGroup.example_tab": "Q Souls",
   "key.category.qsouls": "Q Souls Fantasy",
-  "key.qsouls.charge_attack": "Heavy Melee (Dash)"
+  "key.qsouls.charge_attack": "Heavy Melee (Dash)",
+
+  "config.qsouls.title": "Q Souls Visual Settings",
+  "config.qsouls.enable_impact_frames": "Enable Impact Frames",
+  "config.qsouls.enable_screen_shake": "Enable Camera Shake",
+  "config.qsouls.screen_shake_intensity": "Camera Shake Intensity"
 }
