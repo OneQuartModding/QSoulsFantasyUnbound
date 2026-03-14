@@ -8,6 +8,8 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.onequart.qsouls.common.item.ModCreativeTabs;
+import net.onequart.qsouls.common.item.ModItems;
 import net.onequart.qsouls.config.QSoulsClientConfig;
 import net.onequart.qsouls.network.ModMessages;
 import org.slf4j.Logger;
@@ -27,5 +29,8 @@ public class QSouls {
 
         MinecraftForge.EVENT_BUS.register(this);
         ModMessages.register();
+
+        ModItems.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
     }
 }

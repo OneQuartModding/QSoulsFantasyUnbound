@@ -6,5 +6,33 @@
   "config.qsouls.title": "Визуальные настройки Q Souls",
   "config.qsouls.enable_impact_frames": "Включить вспышки ударов",
   "config.qsouls.enable_screen_shake": "Включить тряску камеры",
-  "config.qsouls.screen_shake_intensity": "Сила тряски камеры"
+  "config.qsouls.screen_shake_intensity": "Сила тряски камеры",
+
+  "item.qsouls.azure_needle": "Лазурная Игла",
+  "item.qsouls.titan_rib": "Ребро Титана",
+  "item.qsouls.echoing_stinger": "Эхо Жало",
+  "item.qsouls.gale_hunter": "Охотник Ветра",
+  "creativetab.qsouls_tab": "Q Souls Fantasy",
+
+  "tooltip.qsouls.type.sword": "Меч",
+  "tooltip.qsouls.type.claymore": "Двуручный меч",
+  "tooltip.qsouls.type.polearm": "Древковое",
+  "tooltip.qsouls.type.bow": "Лук",
+  "tooltip.qsouls.passive": "Пассивный эффект: ",
+
+  "item.qsouls.azure_needle.lore": "\"Удивительно легкий клинок, гудящий на ветру.\"",
+  "item.qsouls.azure_needle.passive_name": "Поток",
+  "item.qsouls.azure_needle.passive_desc": "Дает кратковременное ускорение при попадании.",
+
+  "item.qsouls.titan_rib.lore": "\"Достаточно тяжел, чтобы крошить броню и кости.\"",
+  "item.qsouls.titan_rib.passive_name": "Неудержимый",
+  "item.qsouls.titan_rib.passive_desc": "Значительно повышает сопротивление отбрасыванию.",
+
+  "item.qsouls.echoing_stinger.lore": "\"Вибрирует со смертоносной точностью.\"",
+  "item.qsouls.echoing_stinger.passive_name": "Точный удар",
+  "item.qsouls.echoing_stinger.passive_desc": "Удар кончиком копья наносит на 50% больше урона.",
+
+  "item.qsouls.gale_hunter.lore": "\"Стрелы, выпущенные из этого лука, несут холод бури.\"",
+  "item.qsouls.gale_hunter.passive_name": "Пронзающий холод",
+  "item.qsouls.gale_hunter.passive_desc": "Стрелы замедляют цель при попадании."
 }

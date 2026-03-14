@@ -1,0 +1,6 @@
+{
+  "parent": "qsouls:item/gale_hunter",
+  "textures": {
+    "layer0": "qsouls:item/gale_hunter_pulling_2"
+  }
+}

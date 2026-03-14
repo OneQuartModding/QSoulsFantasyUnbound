@@ -6,5 +6,33 @@
   "config.qsouls.title": "Q Souls Visual Settings",
   "config.qsouls.enable_impact_frames": "Enable Impact Frames",
   "config.qsouls.enable_screen_shake": "Enable Camera Shake",
-  "config.qsouls.screen_shake_intensity": "Camera Shake Intensity"
+  "config.qsouls.screen_shake_intensity": "Camera Shake Intensity",
+
+  "item.qsouls.azure_needle": "Azure Needle",
+  "item.qsouls.titan_rib": "Titan's Rib",
+  "item.qsouls.echoing_stinger": "Echoing Stinger",
+  "item.qsouls.gale_hunter": "Gale Hunter",
+  "creativetab.qsouls_tab": "Q Souls Fantasy",
+
+  "tooltip.qsouls.type.sword": "Sword",
+  "tooltip.qsouls.type.claymore": "Claymore",
+  "tooltip.qsouls.type.polearm": "Polearm",
+  "tooltip.qsouls.type.bow": "Bow",
+  "tooltip.qsouls.passive": "Passive: ",
+
+  "item.qsouls.azure_needle.lore": "\"A surprisingly light blade that hums with the wind.\"",
+  "item.qsouls.azure_needle.passive_name": "Flow",
+  "item.qsouls.azure_needle.passive_desc": "Grants brief movement speed on hit.",
+
+  "item.qsouls.titan_rib.lore": "\"Heavy enough to crush armor and bones alike.\"",
+  "item.qsouls.titan_rib.passive_name": "Unstoppable",
+  "item.qsouls.titan_rib.passive_desc": "Greatly increases Knockback Resistance.",
+
+  "item.qsouls.echoing_stinger.lore": "\"It vibrates with lethal precision.\"",
+  "item.qsouls.echoing_stinger.passive_name": "Sweet Spot",
+  "item.qsouls.echoing_stinger.passive_desc": "Hitting enemies with the tip deals 50% more damage.",
+
+  "item.qsouls.gale_hunter.lore": "\"Arrows fired from this bow carry the chill of the storm.\"",
+  "item.qsouls.gale_hunter.passive_name": "Piercing Chill",
+  "item.qsouls.gale_hunter.passive_desc": "Arrows slow down targets on impact."
 }
